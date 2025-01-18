@@ -1,0 +1,222 @@
+// Import necessary packages
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import fs from 'fs';
+import sanityClient from '@sanity/client';
+import dotenv from 'dotenv';
+
+// Load environment variables securely
+dotenv.config();
+
+// API Integration - Fetch Data from API
+const API_URL = process.env.API_URL;
+
+const fetchData = async () => {
+  try {
+    const response = await axios.get(`${API_URL}/data`);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching data from API:", error);
+    return [];
+  }
+};
+
+// Sanity Client Setup for Data Migration
+const client = sanityClient({
+  projectId: process.env.SANITY_PROJECT_ID,
+  dataset: process.env.SANITY_DATASET,
+  token: process.env.SANITY_API_TOKEN,
+  useCdn: false, // Set to false to always fetch the latest data
+});
+
+// Data Migration Function to Sanity CMS
+const migrateData = async () => {
+  const data = JSON.parse(fs.readFileSync('data.json', 'utf-8')); // Assuming data.json contains your data
+
+  for (const item of data) {
+    try {
+      await client.createOrReplace({
+        _type: 'myType', // Schema type in Sanity
+        name: item.name,
+        description: item.description,
+      });
+      console.log(`Successfully migrated: ${item.name}`);
+    } catch (error) {
+      console.error(`Migration failed for item: ${item.name}`, error);
+    }
+  }
+};
+
+// Sanity Schema Definition
+const myTypeSchema = {
+  name: 'myType',
+  title: 'My Type',
+  type: 'document',
+  fields: [
+    {
+      name: 'name',
+      type: 'string',
+      title: 'Name',
+    },
+    {
+      name: 'description',
+      type: 'text',
+      title: 'Description',
+    },
+  ],
+};
+
+// React Component for Frontend
+function App() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      const result = await fetchData();
+      setData(result);
+    };
+    loadData();
+  }, []);
+
+  return (
+    <div className="App">
+      <h1>API Data Display</h1>
+      <ul>
+        {data.length > 0 ? (
+          data.map((item, index) => (
+            <li key={index}>{item.name}</li>
+          ))
+        ) : (
+          <li>No data available</li>
+        )}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+
+// HTML File - Render React App
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mlàs® - US Official Site | Redefining Luxury Fashion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://static.gucci.com" crossorigin="true">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mlàs</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="p.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cu.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="feedback.html">Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="brand.html">Gallery</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="brand.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Brands</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="gucci.html">Gucci</a></li>
+                            <li><a class="dropdown-item" href="chanel.html">Chanel</a></li>
+                            <li><a class="dropdown-item" href="dior.html">Dior</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- signup modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="signupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="signup()">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signin Modal -->
+    <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signinModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signinForm">
+                        <div class="mb-3">
+                            <label for="signinEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="signinEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signinPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signinPassword" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="signin()">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

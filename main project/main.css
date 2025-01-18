@@ -1,0 +1,387 @@
+/* Styling for the navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+/* Left section (logo) */
+.navbar-left .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* Center section (main links) */
+.navbar-center {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: center;  /* Center the main items */
+}
+
+.navbar-center a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-center a:hover{
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Right section (extra links and dropdowns) */
+.navbar-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;  /* Align items vertically */
+}
+
+.navbar-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-right a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button style */
+.dropbtn {
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* The dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Centering the page header text (optional) */
+h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-top: 100px; /* Adjust this based on the navbar height */
+}
+
+        /* Video Section Styling */
+        #videoCarousel .carousel-item {
+            height: 800px; /* Fixed height for carousel */
+        }
+        .video-container {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .video-container video {
+            object-fit: cover;
+            width: 100%;
+            height: 800px;
+            padding: 20px;
+        }
+
+        
+        .videok-container video {
+            object-fit: cover;
+            width: 100%;
+            height: 800px;
+            padding: 0px;
+        }
+        /* Card Section Styling */
+        .card-img-top {
+            object-fit: cover;
+            height: 200px;
+            width: 100px;
+        }
+
+        /* Ensure proper scaling of cards in smaller screens */
+        .container h4, .container p {
+            text-align: center;
+        }
+/* photo cards */
+.images {
+    display: flex;
+    justify-content: center;
+}
+
+.images img {
+    transition: transform 0.7s ease; /* Smooth transition for hover effect */
+}
+
+.images img:hover {
+    transform: scale(1.1); /* Example hover effect: zoom in */
+}
+.image-box {
+    
+  
+    padding: 20px;
+    width: 400px;
+    height: 500px;
+    margin: 20px;
+    
+   
+    align-items: center;
+    justify-content: center;
+}
+.video {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds space between the video boxes */
+    flex-wrap: wrap; /* Allows videos to wrap to the next line if the space is limited */
+}
+
+.video-box {
+    padding: 10px;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column; /* Align video and h6 vertically */
+    align-items: center; /* Center the content */
+    justify-content: center;
+}
+
+h6 {
+    margin-top: 10px; /* Adds some space between the video and the caption */
+}
+
+/* photo cards close*/
+
+.intro {
+    margin-bottom: 20px;
+}
+main {
+    padding: 20px;
+    text-align: center;
+}
+ /* Footer Styling */
+ footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 40px 0;
+        }
+        footer .social-icons {
+            margin-top: 10px;
+        }
+        footer .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        footer .social-icons a:hover {
+            color: #04AA6D;
+        }
+
+        footer .contact-info {
+            margin-bottom: 10px;
+        }
+
+        footer .contact-info h5 {
+            font-weight: bold;
+        }
+
+        footer .contact-info p {
+            font-size: 14px;
+        }
+
+        footer .copyright {
+            text-align: center;
+            font-size: 14px;
+        }
+ /* theme */
+        /* Dark theme styles */
+        body.dark-theme {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        /* Light theme styles (default) */
+        body {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            color: #000;
+            font-size: 24px;
+        }
+
+        .dark-theme .theme-toggle {
+            color: #fff;
+        }
+/* ==about us styling============ */
+/* ==first para styling======== */
+.para{
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  /* ==background styling========== */
+         .about{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: white; */
+  
+  }
+  
+  /* ==image styling============= */
+   .about-img{
+    background: url(bracelet.webp) no-repeat left;
+    background-size: 45%;
+    /* background-color: white; */
+    overflow: hidden;
+    padding: 100px 0;
+  }
+  
+  /* text (written inside) styling========= */
+  .inner-section{
+    width: 60%;
+    float: right;
+    background-color: lightgoldenrodyellow;
+    padding: 30px 30px 80px  ;
+    box-shadow: 20px 20px 18px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* ==h2 heading style of overall h2 used */
+   h2{
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: 900;
+    /* color: goldenrod; */
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+  
+  /* ==text styling of overall text========= */
+  .text{
+    font-size: 15px;
+    /* color: saddlebrown; */
+    line-height: 25px;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 20px;
+  
+    
+  }
+  
+  /* styling of last bold line */
+  .bold{
+      font-weight: 800;
+      line-height: 10px;
+      /* color: saddlebrown; */
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+  } 
+  
+  .cate{
+    min-height: 100vh;
+    background-color: white;
+    padding-bottom: 100px;
+    }
+    
+    .cate.controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    list-style: none;
+    
+    }
+    .cate.controls.btn{
+    height: 40px;
+    width: 140px;
+    background-color: #fff;
+    color: gray;
+    font-size: 40px;
+    cursor: pointer;
+    margin: 20px;
+    box-shadow: 0 3px 5px rgba(0,0,0.3);
+    text-align: center;
+    }
+    
+    .cate.controls.btn.active{
+      background-color: gray;
+    }
+    .cate.img-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    
+    }
+    
+    .cate.img-container.img{
+    height:250px ;
+    width: 350px;
+    overflow: hidden;
+    border: 15px solid #fff;
+    box-shadow: 0 3px 5px rgba(0,0,0.3) ;
+    margin: 20px;
+    }

@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Gallery Page</title>
+
+    <title>Mlàs® - US Official Site | Redefining Luxury Fashion </title>
+    <link href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+     
+
+
+
+    <!-- Bootstrap JS (optional for this example) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://static.gucci.com" crossorigin="true">
+
+
+     <!-- Custom styles for this template -->
+  <link href="style.css" rel="stylesheet" />
+
+   <style>
+   /* Styling for the navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+/* Left section (logo) */
+.navbar-left .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* Center section (main links) */
+.navbar-center {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: center;  /* Center the main items */
+}
+
+.navbar-center a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-center a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Right section (extra links and dropdowns) */
+.navbar-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;  /* Align items vertically */
+}
+
+.navbar-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-right a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button style */
+.dropbtn {
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* The dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Centering the page header text (optional) */
+h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-top: 100px; /* Adjust this based on the navbar height */
+}
+
+     
+       
+
+ /* Footer Styling */
+ footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 40px 0;
+        }
+        footer .social-icons {
+            margin-top: 10px;
+        }
+        footer .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        footer .social-icons a:hover {
+            color: #04AA6D;
+        }
+
+        footer .contact-info {
+            margin-bottom: 20px;
+        }
+
+        footer .contact-info h5 {
+            font-weight: bold;
+        }
+
+        footer .contact-info p {
+            font-size: 14px;
+        }
+
+        footer .copyright {
+            text-align: center;
+            font-size: 14px;
+        }
+ /* theme */
+        /* Dark theme styles */
+        body.dark-theme {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        /* Light theme styles (default) */
+        body {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            color: #000;
+            font-size: 24px;
+        }
+
+        .dark-theme .theme-toggle {
+            color: #fff;
+        }
+
+
+
+        .cate{
+min-height: 100vh;
+background-color: white;
+padding-bottom: 100px;
+}
+
+.cate.controls{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+padding: 20px 0;
+list-style: none;
+
+}
+.cate.controls.btn{
+height: 40px;
+width: 140px;
+background-color: #fff;
+color: gray;
+font-size: 40px;
+cursor: pointer;
+margin: 20px;
+box-shadow: 0 3px 5px rgba(0,0,0.3);
+text-align: center;
+}
+
+.cate.controls.btn.active{
+  background-color: gray;
+}
+.cate.img-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.cate.img-container.img{
+height:250px ;
+width: 350px;
+overflow: hidden;
+border: 15px solid #fff;
+box-shadow: 0 3px 5px rgba(0,0,0.3) ;
+margin: 20px;
+}
+
+
+
+
+
+/* Footer Styling */
+ footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 40px 0;
+            margin-top: 350px;
+        }
+        footer .social-icons {
+            margin-top: 10px;
+        }
+        footer .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        footer .social-icons a:hover {
+            color: #04AA6D;
+        }
+
+        footer .contact-info {
+            margin-bottom: 20px;
+        }
+
+        footer .contact-info h5 {
+            font-weight: bold;
+        }
+
+        footer .contact-info p {
+            font-size: 14px;
+        }
+
+        footer .copyright {
+            text-align: center;
+            font-size: 14px;
+        }
+
+
+        .intro {
+    margin-bottom: 20px;
+}
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+
+    </style>
+
+
+</head>
+<body>
+  
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <a class="logo" href="#home">Mlàs</a>
+        </div>
+        <div class="navbar-center">
+            <a href="p.html" class="active">Home</a>
+            <a href="cu (2).html">Contact Us</a>
+            <form class="d-flex" id="searchForm">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput" name="query">
+              <button class="btn btn-outline-light" type="button" id="searchButton">Search</button>
+          </form>
+          
+    
+            
+        </div>
+        <div class="navbar-right">
+            <div class="dropdown">
+                <a href="galleryPage.html" class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <a href="#brand1">Brand 1</a>
+                    <a href="#brand2">Brand 2</a>
+                    <a href="#brand3">Brand 3</a>
+                </div>
+            </div>
+            
+                <a href="aboutus.html" >About Us</a>
+                
+           <!-- Dark Theme Toggle -->
+           <button class="btn btn-outline-light" ><button class="theme-toggle" id="themeToggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"/>
+                    </svg>
+                </button></button>
+        </div>
+    </div>
+    
+    <br><br>
+    
+    
+
+<br>
+<main>
+  <section class="intro">
+
+    
+
+     
+<!-- //Product cards -->
+<div class="heading" style="text-align: center; text-shadow: black 8px; font-family: initial; font-style: italic; font-size: 40px;"><h1> Categories </h1> <form class="d-flex" id="searchForm">
+  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput" name="query">
+  <button class="btn btn-box" type="button" id="searchButton" >Search</button>
+</form></div>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img1.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img2.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="im3.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img4.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img5.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img6.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img7.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img9.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img10.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img11.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img12.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img16.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img15.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img14.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img17.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img18.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="18.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img21.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img20.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="col-sm-6 col-md-4 col-lg-3"> 
+ 
+
+    <div class="container page-wrapper">
+      <div class="page-inner">
+        <div class="row">
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="img19.jpg" alt="">
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">I feel like Pablo</span>
+                  <span class="p-company">Yeezy</span>
+                </div>
+                <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+              </div>
+            </div>
+    
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+    
+              <a class="cart" href="#">
+                <span class="price">$120</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+ 
+
+</section>
+</main>
+
+ 
+
+<!-- end blog section -->
+
+
+<section class="offer_section layout_padding">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-7 px-0">
+        <div class="box offer-box1">
+          <img src="o1.jpg" alt="">
+          <div class="detail-box">
+            <h2>
+              Upto 15% Off
+            </h2>
+            <a href="">
+              Shop Now
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 px-0">
+        <div class="box offer-box2">
+          <img src="5 (2).jpg" alt="" height="200px">
+          <div class="detail-box">
+            <h2>
+              Upto 10% Off
+            </h2>
+            <a href="">
+              Shop Now
+            </a>
+          </div>
+        </div>
+        <div class="box offer-box3">
+          <img src="00.jpg" alt="" height="200px">
+          <div class="detail-box">
+            <h2>
+              Upto 20% Off
+            </h2>
+            <a href="">
+              Shop Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      </section>
+
+
+
+<!-- Footer Section -->
+<footer>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4 contact-info">
+              <h5>Contact Us</h5>
+              <p>Email: info@example.com</p>
+              <p>Phone: +123 456 789</p>
+          </div>
+          <div class="col-md-4">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                  <li><a href="#home" class="text-white">Home</a></li>
+                  <li><a href="#feedback" class="text-white">Feedback</a></li>
+                  <li><a href="#contactus" class="text-white">Contact Us</a></li>
+              </ul>
+          </div>
+          <div class="col-md-4">
+              <h5>Follow Us</h5>
+              <div class="social-icons">
+                  <a href="#" class="facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                  <a href="#" class="twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                  <a href="#" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
+              </div>
+          </div>
+      </div>
+      <div class="copyright">
+          <p>&copy; 2024 Your Website. All rights reserved.</p>
+          <h1 style="padding: 20px;letter-spacing: 50px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-size:150px;">Mlàs </h1>
+      </div>
+  </div>
+</footer>
+
+</body>
+<script>
+ // Function to filter content based on search query
+function searchContent() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    const items = document.querySelectorAll(".product-item"); // Change this selector to match the elements you're searching
+    items.forEach(item => {
+        const itemName = item.textContent.toLowerCase();
+        if (itemName.includes(query)) {
+            item.style.display = "block"; // Show matching items
+        } else {
+            item.style.display = "none"; // Hide non-matching items
+        }
+    });
+}
+
+// Handle the search button click
+document.getElementById("searchButton").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the form from submitting and redirecting to a new page
+    searchContent(); // Trigger the search functionality
+});
+
+// Dark Theme Toggle functionality
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+
+// Check the current theme from localStorage
+if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-theme');
+}
+
+// Toggle theme on button click
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+
+    // Save the current theme in localStorage
+    if (body.classList.contains('dark-theme')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+ // Function to filter content based on search query
+ function searchContent() {
+        const query = document.getElementById("searchInput").value.toLowerCase();
+        const items = document.querySelectorAll(".product-item"); // Change this selector to match the elements you're searching
+        items.forEach(item => {
+            const itemName = item.textContent.toLowerCase();
+            if (itemName.includes(query)) {
+                item.style.display = "block"; // Show matching items
+            } else {
+                item.style.display = "none"; // Hide non-matching items
+            }
+        });
+    }
+</script>
+
+
+
+
+
+
+</body>
+</html>
